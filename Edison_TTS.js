@@ -13,4 +13,5 @@ var params = {
 };
 
 // Pipe the synthesized text to a file
-text_to_speech.synthesize(params).pipe(fs.createWriteStream('output.wav'));
+var audio = text_to_speech.synthesize(params).pipe(fs.createWriteStream('output.wav'));
+audio.play;
